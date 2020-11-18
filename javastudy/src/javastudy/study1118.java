@@ -6,6 +6,10 @@ public class study1118 {
 
 	public static void main(String[] args)
 	{
+		gcd();
+	}
+	private static void gcd()
+	{
 		Scanner input = new Scanner(System.in);
 		int a = input.nextInt();
 		int b = input.nextInt();
@@ -20,5 +24,10 @@ public class study1118 {
 		}
 		System.out.println(a);
 		System.out.println(orga*orgb/a);
+	}
+	private static void arabia()
+	{
+		Scanner input = new Scanner(System.in);
+		char munja = input.next().charAt(0);
 	}
 }
