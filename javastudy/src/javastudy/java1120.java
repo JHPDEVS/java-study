@@ -29,7 +29,7 @@ public class java1120 {
 //		{
 //			System.out.println("메인 메소드로 전달된 인자가 없습니다");
 //		}
-	java1();
+	secondarray();
 	}
 	
 	private static void java1() {
@@ -79,5 +79,25 @@ public class java1120 {
 		int tmp = arr[idx1];
 		arr[idx1] = arr[idx2];
 		arr[idx2] = tmp;
+	}
+	
+	private static void secondarray()
+	{
+		int[][] array = new int[3][40];
+		for(int i=0;i<array.length;i++)
+		{
+			for(int j=0;j<array[i].length;j++)
+			{
+				array[i][j] = j;
+			}
+		}
+		for(int i=0;i<array.length;i++)
+		{
+			for(int j=0;j<array[i].length;j++)
+			{
+				System.out.print(array[i][j] + " ");
+			}
+			System.out.println("");
+		}
 	}
 }
