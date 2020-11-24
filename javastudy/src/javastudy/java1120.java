@@ -98,6 +98,16 @@ public class java1120 {
 				System.out.print(array[i][j] + " ");
 			}
 			System.out.println("");
+			//System.out.printf("%3d ",  ja[i][j]);
+		}
+	}
+	
+	private static void generateint(int[] arr)
+	{
+		Random rand = new Random();
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i] = rand.nextInt(100)+1;
 		}
 	}
 }
