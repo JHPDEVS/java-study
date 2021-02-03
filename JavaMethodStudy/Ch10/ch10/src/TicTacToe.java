@@ -7,6 +7,7 @@ public class TicTacToe extends JFrame implements ActionListener{
     JButton[][] buttons = new JButton[3][3];
     JLabel jtext = new JLabel("O 턴입니다");
     private int turn;
+    private int count=0;
     public TicTacToe() {
         Random rand = new Random();
         turn = rand.nextInt(2) ;
@@ -14,6 +15,7 @@ public class TicTacToe extends JFrame implements ActionListener{
         turn();
         jtext.setHorizontalAlignment(JLabel.CENTER);
         jtext.setFont(new Font(Font.SANS_SERIF,Font.BOLD,75));
+        jtext.setForeground(Color.red);
         this.setSize(500,500);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel1 = new JPanel();
@@ -55,6 +57,7 @@ public class TicTacToe extends JFrame implements ActionListener{
                             buttons[i][j].setForeground(Color.red);
                             System.out.println("o표시");
                             isWin();
+                            count++;
                             turn++;
                         } else {
                             buttons[i][j].setText("x");
@@ -62,6 +65,7 @@ public class TicTacToe extends JFrame implements ActionListener{
                             System.out.println("x표시");
                             isWin();
                             turn--;
+                            count++;
                         }
                     }
                 }
@@ -69,11 +73,15 @@ public class TicTacToe extends JFrame implements ActionListener{
         }
         turn();
     }
+    private void draw() {
+        JFrame jf = new Draw();
+    }
     private void turn() {
         if(turn==0) {
             jtext.setText("O턴입니다");
         } else {
             jtext.setText("X턴입니다");
+            System.out.println(count);
         }
     }
     private void isWin() {
@@ -90,6 +98,7 @@ public class TicTacToe extends JFrame implements ActionListener{
                 buttons[i][1].setForeground(new Color(255,255,255));
                 buttons[i][2].setForeground(new Color(255,255,255));
                 JFrame jf = new OisWin();
+                return;
             }
             if(buttons[i][0].getText().equals("x") && buttons[i][1].getText().equals("x") && buttons[i][2].getText().equals("x")){
                 buttons[i][0].setBackground(new Color(25,25,25));
@@ -99,6 +108,7 @@ public class TicTacToe extends JFrame implements ActionListener{
                 buttons[i][1].setForeground(new Color(255,255,255));
                 buttons[i][2].setForeground(new Color(255,255,255));
                 JFrame jf = new XisWin();
+                return;
             }
 
             //------------------------ 세로
@@ -110,6 +120,7 @@ public class TicTacToe extends JFrame implements ActionListener{
                 buttons[1][i].setForeground(new Color(255,255,255));
                 buttons[2][i].setForeground(new Color(255,255,255));
                 JFrame jf = new OisWin();
+                return;
             }
             if(buttons[0][i].getText().equals("x") && buttons[1][i].getText().equals("x") && buttons[2][i].getText().equals("x")){
                 buttons[0][i].setBackground(new Color(25,25,25));
@@ -119,6 +130,7 @@ public class TicTacToe extends JFrame implements ActionListener{
                 buttons[1][i].setForeground(new Color(255,255,255));
                 buttons[2][i].setForeground(new Color(255,255,255));
                 JFrame jf = new XisWin();
+                return;
             }
         }
 
@@ -131,6 +143,7 @@ public class TicTacToe extends JFrame implements ActionListener{
             buttons[1][1].setForeground(new Color(255,255,255));
             buttons[2][2].setForeground(new Color(255,255,255));
             JFrame jf = new OisWin();
+            return;
         }
         if(buttons[0][0].getText().equals("x") && buttons[1][1].getText().equals("x") && buttons[2][2].getText().equals("x")) {
             buttons[0][0].setBackground(new Color(25,25,25));
@@ -140,6 +153,7 @@ public class TicTacToe extends JFrame implements ActionListener{
             buttons[1][1].setForeground(new Color(255,255,255));
             buttons[2][2].setForeground(new Color(255,255,255));
             JFrame jf = new XisWin();
+            return;
         }
 
         if(buttons[0][2].getText().equals("o") && buttons[1][1].getText().equals("o") && buttons[2][0].getText().equals("o")) {
@@ -150,6 +164,7 @@ public class TicTacToe extends JFrame implements ActionListener{
             buttons[1][1].setForeground(new Color(255,255,255));
             buttons[2][0].setForeground(new Color(255,255,255));
             JFrame jf = new OisWin();
+            return;
         }
         if(buttons[0][2].getText().equals("x") && buttons[1][1].getText().equals("x") && buttons[2][0].getText().equals("x")) {
             buttons[0][2].setBackground(new Color(25,25,25));
@@ -159,6 +174,20 @@ public class TicTacToe extends JFrame implements ActionListener{
             buttons[1][1].setForeground(new Color(255,255,255));
             buttons[2][0].setForeground(new Color(255,255,255));
             JFrame jf = new XisWin();
+            return;
+        }
+
+        for(int i=0;i<3;i++) {
+            for(int j=0;j<3;j++) {
+               if(buttons[i][j].getText().equals("")) {
+
+               } else {
+                   if(count>=8) {
+                       draw();
+                   }
+                   break;
+               }
+            }
         }
         //------------------------------------------------
     }
