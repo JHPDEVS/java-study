@@ -16,12 +16,12 @@
 **[TextArea]**  
 [TextArea.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/TextArea.java)
 
-**[PizzaDemo]**  
+**[피자주문창 PizzaOrderDemo]**  
 [PizzaDemo.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/PizzaDemo.java)
 
 
-**[파일선택기]**
+**[파일선택기 FileChosserDemo]**
 [FileChooserDemo.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/FileChooserDemo.java)
 
-**[파일선택기]**
+**[번역기]**
 [TextConverter.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/TextConverter.java)
