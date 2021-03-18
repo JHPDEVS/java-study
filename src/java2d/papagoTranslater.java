@@ -125,15 +125,6 @@ public class papagoTranslater extends JFrame implements ActionListener {
             out.setText(" ");
         }
     }
-        private String toEnglish() {
-        /*
-            korean 문자열을 영어로 변환해서 반환
-            텍스트 >= text
-            영어 => english
-        */
-        String result = in.getText();
-        return result;
-    }
     public static void main(String[] args) {
 
         papagoTranslater hello =new papagoTranslater();
