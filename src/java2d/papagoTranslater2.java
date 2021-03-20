@@ -83,8 +83,8 @@ public class papagoTranslater2 extends JFrame implements ActionListener {
         */
         if(e.getSource().equals(convert)) {
             //out.append(toEnglish(in.getText()));
-        String clientId = "Rxe9heD5_m2Abcrk1kds";//애플리케이션 클라이언트 아이디값";
-        String clientSecret = "HWrL0Tp9hA";//애플리케이션 클라이언트 시크릿값";
+        String clientId = "";//애플리케이션 클라이언트 아이디값";
+        String clientSecret = "";//애플리케이션 클라이언트 시크릿값";
 
         String apiURL = "https://openapi.naver.com/v1/papago/n2mt";
         String text = null;
