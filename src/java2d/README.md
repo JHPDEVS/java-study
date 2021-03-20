@@ -30,8 +30,10 @@
 
 **[캡쳐 Capture]**
 [Capture.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/Capture.java)
+![cap](https://user-images.githubusercontent.com/30117732/111863147-17607400-899d-11eb-9528-fc5e5f54168a.PNG)
 
 **[번역기 Translate with Papago api (json Parsing)]**
 [papagoTranslater.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/papagoTranslater.java)
-
+![캡처2](https://user-images.githubusercontent.com/30117732/111863148-1891a100-899d-11eb-972d-4d89186ed886.PNG)
 //
+
