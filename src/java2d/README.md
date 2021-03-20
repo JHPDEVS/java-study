@@ -21,7 +21,15 @@
 
 
 **[파일선택기 FileChosserDemo]**
+
 [FileChooserDemo.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/FileChooserDemo.java)
 
-**[번역기]**
+**[번역기 Translate]**
 [TextConverter.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/TextConverter.java)
+
+
+**[캡쳐 Capture]**
+[Capture.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/Capture.java)
+
+**[번역기 Translate with Papago api (json Parsing)]**
+[papagoTranslater.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/papagoTranslater.java)
