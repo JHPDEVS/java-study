@@ -39,3 +39,6 @@
 ![캡처2](https://user-images.githubusercontent.com/30117732/111863148-1891a100-899d-11eb-972d-4d89186ed886.PNG)
 //
 
+**[핑퐁 PingPong)]**
+[MiniPingPong.java](https://github.com/JHPDEVS/java-study/blob/master/src/java2d/MiniPingPong.java)
+![pinball](https://user-images.githubusercontent.com/30117732/111981059-816a4c00-8b4a-11eb-87c8-88d543965b4c.PNG)
