@@ -90,6 +90,8 @@ public class MyArrayList2 {
             arr[i-1] = arr[i];
         }
         size--;
+        } else {
+            System.out.println("삭제할 번호를 올바르게 입력해주세요");
         }
     }
     public static void main(String[] args) {
@@ -103,7 +105,7 @@ public class MyArrayList2 {
             list2.add(i);
         }
         list2.remove(0);
-        list.remove(8);
+        list.remove(11);
        // list.add(3,100);
         System.out.println(list2.toString());
         System.out.println(list.toString());
