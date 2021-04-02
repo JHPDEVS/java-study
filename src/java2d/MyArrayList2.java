@@ -85,13 +85,27 @@ public class MyArrayList2 {
     
     public void remove(int idx) {
         // 리무브 할려면 idx 숫자부터 한칸 씩 왼쪽으로 땡겨주고 size를 하나 뺀다.
+        if(idx < size) {
+            for (int i=idx+1; i<size; i++) {
+            arr[i-1] = arr[i];
+        }
+        size--;
+        }
     }
     public static void main(String[] args) {
         MyArrayList2 list = new MyArrayList2();
-        for (int i = 0; i < 100; i++) {
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        for (int i = 0; i < 10; i++) {
             list.add(i);
         }
-        list.add(3,100);
+        
+        for(int i=0;i<10;i++) {
+            list2.add(i);
+        }
+        list2.remove(0);
+        list.remove(8);
+       // list.add(3,100);
+        System.out.println(list2.toString());
         System.out.println(list.toString());
         
     }
