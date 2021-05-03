@@ -29,7 +29,7 @@ public class Sort {
 		// Comparator 클래스를 구현해서 정렬 방법을 알려줘야 하낟.
 		// 또는 원소의 타입 클래스를 변경할 수 있지만,  그 클래스를 변경하지 않고
 		// 정렬 방법을 변경하고자 할 때도 Comparator 클래스를 구현해 준다.
-		Collections.sort(list, Comparator.reverseOrder()); // 내림차순
+		Collections.sort(list, new MyStringComparator()); // 내림차순
 		System.out.println(list);
 	}
 	
