@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -88,13 +89,13 @@ public class BookListViewer extends JFrame implements ActionListener{
 		        	   int id = rs.getInt("book_id");
 		               String title = rs.getString("title");
 		               String publisher = rs.getString("publisher");
-		               String year = rs.getString("year");
+		               Date year = rs.getDate("year");
 		               String price = rs.getString("price");
 		               
 		               idField.setText(String.valueOf(id));
 		               titleField.setText(title);
 		               publisherField.setText(publisher);
-		               yearField.setText(year);
+		               yearField.setText(String.valueOf(year));
 		               priceField.setText(price);
 		               
 		           } else {            // 대응되는 단어가 없는 경우
@@ -174,5 +175,5 @@ public class BookListViewer extends JFrame implements ActionListener{
 			System.out.println("종료 버튼 클릭됨");
 			System.exit(0);
 		}
-	}
+	} 
 }
