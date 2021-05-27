@@ -104,9 +104,6 @@ public class BookListViewer extends JFrame implements ActionListener{
 		           e.printStackTrace();
 		       } finally {
 		           try {
-		               if(rs != null) {
-		                   rs.close(); // 선택 사항
-		               }
 		               
 		               if(pstmt != null) {
 		                   pstmt.close(); // 선택사항이지만 호출 추천
